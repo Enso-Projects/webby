@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WERS | Equipment Rental System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand" aria-label="WERS brand">
+        <span class="logo" aria-hidden="true">W</span>
+        <div>
+          <p class="brand-title">WERS</p>
+          <p class="brand-subtitle">Web-Based Equipment Rental & Scheduling System</p>
+        </div>
+      </div>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="primaryNav">
+        Menu
+      </button>
+
+      <nav id="primaryNav" class="nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="#/home" data-route>Home</a></li>
+          <li><a href="#/transactions" data-route>Transactions</a></li>
+          <li><a href="#/about" data-route>About</a></li>
+          <li><a href="#/contact" data-route>Contact</a></li>
+          <li><a href="#/register" data-route>Register</a></li>
+          <li><a href="#/login" data-route id="navLoginLink">Login</a></li>
+          <li><a href="#/admin" data-route id="navAdminLink" class="hidden">Admin</a></li>
+          <li><button class="linklike hidden" id="logoutBtn" type="button">Logout</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" role="main">
+    <div class="container">
+      <!-- DASHBOARD / NAV CONTEXT -->
+      <section class="dashboard" aria-label="Dashboard">
+        <div class="dash-card">
+          <p class="dash-title">Session</p>
+          <p id="sessionInfo" class="dash-value">Guest</p>
+        </div>
+        <div class="dash-card">
+          <p class="dash-title">Equipment Ready</p>
+          <p id="readyCount" class="dash-value">0</p>
+        </div>
+        <div class="dash-card">
+          <p class="dash-title">Out for Rental</p>
+          <p id="outCount" class="dash-value">0</p>
+        </div>
+        <div class="dash-card">
+          <p class="dash-title">In Maintenance</p>
+          <p id="maintCount" class="dash-value">0</p>
+        </div>
+      </section>
+
+      <!-- ROUTED PAGES -->
+      <section id="view" class="view" aria-live="polite"></section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>WERS demo app for Web Design & Development Lab</small>
+      <small id="footerNote">Semantic HTML • Responsive CSS • JavaScript</small>
+    </div>
+  </footer>
+
+  <dialog id="modal" class="modal" aria-label="Message dialog">
+    <form method="dialog" class="modal-inner">
+      <p id="modalText" class="modal-text">Message</p>
+      <div class="modal-actions">
+        <button class="btn" value="ok">OK</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
